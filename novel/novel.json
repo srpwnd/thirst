@@ -44,7 +44,7 @@
     ],
     "settings": {
         "showSaveButtons": "false",
-        "inventoryHidden": "true"
+        "inventoryHidden": "false"
     },
     "inventories": [
         {
