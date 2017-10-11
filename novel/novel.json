@@ -4,11 +4,22 @@
     "scenes": [
         {
             "name": "intro",
-            "text": "hello",
+            "text": "You wake up.\n In the middle of a desert.\n There is a bag next to you.",
             "choices": [
                 {
-                    "text": "tududu"
+                    "text": "Search the bag.",
+                    "nextScene": "bag"
+                }, {
+                    "text": "Look around."
                 }
+            ]
+        },
+        {
+            "name": "bag",
+            "text": "You search the bag. There is a water bottle.",
+            "addItem": "watter bottle",
+            "choices": [
+                
             ]
         }
     ]
