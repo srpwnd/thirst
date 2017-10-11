@@ -62,7 +62,7 @@
                 },
                 {
                     "text":"Leave the bottle.",
-                    "addItem":"bottle_leaver,1",
+                    "addItem":"!bottle_leaver,1",
                     "nextScene": "second"
                 }
             ]
@@ -89,7 +89,7 @@
         },
         {
             "name": "walk2",
-            "text": "It is very hot. [if(inv.not_thirsty == 1)]You are getting thirsty.[/if]",
+            "text": "It is very hot. [if(inv.not_thirsty != 1)]You are getting thirsty.[/if]",
             "choices": [
                 {
                     "text": "Walk.",
@@ -98,7 +98,8 @@
                 {
                     "text": "Drink water.",
                     "requirement":"inv.water_bottle > 0",
-                    "removeItem":"water_bottle,1|not_thirsty,1",
+                    "removeItem":"water_bottle,1",
+                    "setItem":"!not_thirsty,1",
                     "nextScene": "walk2"
                 }
             ]
@@ -159,17 +160,87 @@
             "text": "[if(inv.bottle_leaver == 1)]The childs water has saved your life.[/if] You got to a place looking like an abandoned village. You [if(inv.bottle_leaver == 1)]and the child [/if]decide to explore. There are few half-destroyed shelters. And a well! You get closer hoping to find some water.",
             "choices": [
                 {
-                    "text": "Go inspect the flickering.",
-                    "nextScene": "flicker"
-                },
-                {
-                    "text": "Keep walking."
+                    "text": "Inspect the well.",
+                    "nextScene": "well2"
                 }
             ]
         },
         {
             "name": "wandering",
             "text": "You are wandering through the desert. Without any food[if(inv.water_bottle == 0)], without any water[/if]. You don't know where you are going. It has been hours since you met the old lady. [if(inv.water_bottle > 0)]You wish you'd given her some water.[/if] You have lost your way, you are wandering until your last breath."
+        },
+        {
+            "name": "airplane2",
+            "text": "The old woman is very thankful for the water you gave her. She invites you inside her plane. There are a few bottles with water lying around. She nicely hands you folded paper and sends you away with her hand gestures.",
+            "choices": [
+                {
+                    "text": "Unfold the paper.",
+                    "nextScene": "map"
+                }
+            ]
+        },
+        {
+            "name": "map",
+            "text": "You unfold the paper. There is a map with instructions.",
+            "choices": [
+                {
+                    "text": "Follow the instructions.",
+                    "addItem": "!map_finder,1",
+                    "nextScene": "well"
+                }
+            ]
+        },
+        {
+            "name": "well2",
+            "text": "The well asks you to roll a dice[ig(fight_counter<3)] again[/if]. You do so and continue with rolled number.",
+            "addItem":"!fight_counter,3|!well_hp,100",
+            "choices": [
+                {
+                    "text": "1",
+                    "removeItem":"fight_counter,1",
+                    "setItem":"well_hp,inv.well_hp-rand.20,45",
+                    "nextScene": "[if(inv.fight_counter>0 && inv.well_hp > 0]well2[/if][if(inv.fight_counter>0 && inv.well_hp <= 0]win[/if][if(inv.fight_counter <= 0 && inv.well_hp > 0]lose[/if]"
+                },
+                {
+                    "text": "2",
+                    "removeItem":"fight_counter,1",
+                    "setItem":"well_hp,inv.well_hp-rand.20,45",
+                    "nextScene": "[if(inv.fight_counter>0 && inv.well_hp > 0]well2[/if][if(inv.fight_counter>0 && inv.well_hp <= 0]win[/if][if(inv.fight_counter <= 0 && inv.well_hp > 0]lose[/if]"
+                },
+                {
+                    "text": "3",
+                    "removeItem":"fight_counter,1",
+                    "setItem":"well_hp,inv.well_hp-rand.20,45",
+                    "nextScene": "[if(inv.fight_counter>0 && inv.well_hp > 0]well2[/if][if(inv.fight_counter>0 && inv.well_hp <= 0]win[/if][if(inv.fight_counter <= 0 && inv.well_hp > 0]lose[/if]"
+                },
+                {
+                    "text": "4",
+                    "removeItem":"fight_counter,1",
+                    "setItem":"well_hp,inv.well_hp-rand.20,45",
+                    "nextScene": "[if(inv.fight_counter>0 && inv.well_hp > 0]well2[/if][if(inv.fight_counter>0 && inv.well_hp <= 0]win[/if][if(inv.fight_counter <= 0 && inv.well_hp > 0]lose[/if]"
+                },
+                {
+                    "text": "5",
+                    "removeItem":"fight_counter,1",
+                    "setItem":"well_hp,inv.well_hp-rand.20,45",
+                    "nextScene": "[if(inv.fight_counter>0 && inv.well_hp > 0]well2[/if][if(inv.fight_counter>0 && inv.well_hp <= 0]win[/if][if(inv.fight_counter <= 0 && inv.well_hp > 0]lose[/if]"
+                },
+                {
+                    "text": "6",
+                    "removeItem":"fight_counter,1",
+                    "setItem":"well_hp,inv.well_hp-rand.20,45",
+                    "nextScene": "[if(inv.fight_counter>0 && inv.well_hp > 0]well2[/if][if(inv.fight_counter>0 && inv.well_hp <= 0]win[/if][if(inv.fight_counter <= 0 && inv.well_hp > 0]lose[/if]"
+                }
+            ]
+        }, 
+        {
+            "name":"win",
+            "text":"You managed to get water out of the well. You didn't dehydrate and kept walking for your rescue. Maybe you even got out alive, who knows."
+        }
+        , 
+        {
+            "name":"lose",
+            "text":"You didn't get any water out of the well. You managed to walk a few more miles trying to save yourself before you died of thirst."
         }
 
 
