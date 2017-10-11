@@ -41,7 +41,7 @@
             "choices": [
                 {
                     "text": "Search the bag.",
-                    "requirement": "inv.water_bottle<=0"
+                    "requirement": "inv.water_bottle>0"
                 },
                 {
                     "text": "Walk."
