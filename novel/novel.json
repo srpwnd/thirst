@@ -9,7 +9,6 @@
             "displayName": "Watter bottle"
         } 
         ]
-
     ],
     "scenes": [
         {
@@ -41,7 +40,8 @@
             "text": "There is nothing around. Only sand. A lots of it.",
             "choices": [
                 {
-                    "text": "[if (inv.water_bottle <= 0)]Search the bag.[/if]"
+                    "text": "Search the bag.",
+                    "requirement": "inv.water_bottle,0"
                 },
                 {
                     "text": "Walk."
