@@ -1,6 +1,13 @@
 {
     "name": "Thirst",
     "version": "0.1a",
+    "inventories": [
+        {
+            "name":"water_bottle",
+            "value": 0,
+            "displayName": "Watter bottle"
+        }
+    ],
     "scenes": [
         {
             "name": "intro",
@@ -45,12 +52,5 @@
     "settings": {
         "showSaveButtons": "false",
         "inventoryHidden": "false"
-    },
-    "inventories": [
-        {
-            "name":"water_bottle",
-            "value": 0,
-            "displayName": "Watter bottle"
-        }
-    ]
+    }
 }
