@@ -47,6 +47,10 @@
         "inventoryHidden": "true"
     },
     "inventories": [
-
+        {
+            "name":"water_bottle",
+            "value": 0,
+            "displayName": "Watter bottle"
+        }
     ]
 }
