@@ -18,7 +18,7 @@
         {
             "name": "bag",
             "text": "You search the bag. There is a water bottle.",
-            "addItem": "water_bottle,1",
+            "setItem": "water_bottle,1",
             "choices": [
                 {
                     "text":"Look around.",
