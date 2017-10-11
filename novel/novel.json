@@ -46,7 +46,7 @@
                 {
                     "text": "Wait.",
                     "requirement":"inv.lookaround == 1",
-                    "nextScene": "wait0"
+                    "nextScene": "walk3"
                 }
             ]
         },
