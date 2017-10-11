@@ -30,9 +30,9 @@
             "name": "lookout",
             "text": "There is nothing around. Only sand. A lots of it.",
             "choices": [
-                [if (inv.water_bottle <= 0)]{
-                    "text": "Search the bag."
-                },[/if]
+                {
+                    "text": "[if (inv.water_bottle <= 0)]Search the bag.[/if]"
+                },
                 {
                     "text": "Walk."
                 },
