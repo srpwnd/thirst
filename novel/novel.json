@@ -7,7 +7,12 @@
             "name":"water_bottle",
             "value": 0,
             "displayName": "Watter bottle"
-        } 
+        } ,
+        {
+            "name":"bag",
+            "value": 0,
+            "hidden": "true"
+        }
         ]
     ],
     "scenes": [
@@ -16,38 +21,98 @@
             "text": "You wake up.\n In the middle of a desert.\n There is a bag next to you.",
             "choices": [
                 {
+                    "text": "Get up.",
+                    "nextScene": "second"
+                }
+            ]
+        },{
+            "name": "second",
+            "text": "Desert. [if(inv.bag == 0)]There is a bag next to you.[/if] [if (inv.lookaround == 1)]There is nothing around. Only sand. A lots of it.[/if]",
+            "choices":[
+                {
                     "text": "Search the bag.",
+                    "requirement":"inv.bag == 0",
                     "nextScene": "bag"
                 }, {
                     "text": "Look around.",
-                    "nextScene": "lookout"
+                    "addItem": "lookaround,1",
+                    "nextScene": "second"
+                },
+                {
+                    "text": "Walk.",
+                    "requirement":"inv.lookaround == 1",
+                    "nextScene": "walk0"
+                },
+                {
+                    "text": "Wait.",
+                    "requirement":"inv.lookaround == 1",
+                    "nextScene": "wait0"
                 }
             ]
         },
         {
             "name": "bag",
             "text": "You search the bag. There is a water bottle.",
-            "setItem": "water_bottle,1",
+            "setItem": "bag,1",
             "choices": [
                 {
-                    "text":"Look around.",
-                    "nextScene": "lookout"
+                    "text":"Take the bottle.",
+                    "setItem":"water_bottle,1",
+                    "nextScene": "second"
+                },
+                {
+                    "text":"Leave the bottle.",
+                    "addItem":"bottle_leaver,1",
+                    "nextScene": "second"
                 }
             ]
         },
         {
-            "name": "lookout",
-            "text": "There is nothing around. Only sand. A lots of it.",
+            "name": "walk0",
+            "text": "You walk for a while. It is very hot.",
             "choices": [
                 {
-                    "text": "Search the bag.",
-                    "requirement": "inv.water_bottle==0"
+                    "text": "Walk.",
+                    "nextScene": "walk1"
+                }
+            ]
+        },
+        {
+            "name": "walk1",
+            "text": "It is very hot.",
+            "choices": [
+                {
+                    "text": "Walk.",
+                    "nextScene": "walk2"
+                }
+            ]
+        },
+        {
+            "name": "walk2",
+            "text": "It is very hot. [if(inv.not_thirsty == 1)]You are getting thirsty.[/if]",
+            "choices": [
+                {
+                    "text": "Walk.",
+                    "nextScene": "walk3"
                 },
                 {
-                    "text": "Walk."
+                    "text": "Drink water.",
+                    "requirement":"inv.water_bottle > 0",
+                    "removeItem":"water_bottle,1|not_thirsty,1",
+                    "nextScene": "walk2"
+                }
+            ]
+        },
+        {
+            "name": "walk3",
+            "text": "You see light flicker in a distance.",
+            "choices": [
+                {
+                    "text": "Go inspect the flickering.",
+                    "nextScene": "walk2"
                 },
                 {
-                    "text": "Wait."
+                    "text": "Keep walking."
                 }
             ]
         }
