@@ -22,5 +22,9 @@
                 
             ]
         }
-    ]
+    ],
+    "settings": {
+        "showSaveButtons": "false",
+        "inventoryHidden": "true"
+    }
 }
