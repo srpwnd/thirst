@@ -10,21 +10,43 @@
                     "text": "Search the bag.",
                     "nextScene": "bag"
                 }, {
-                    "text": "Look around."
+                    "text": "Look around.",
+                    "nextScene": "lookout"
                 }
             ]
         },
         {
             "name": "bag",
             "text": "You search the bag. There is a water bottle.",
-            "addItem": "watter bottle",
+            "addItem": "watter_bottle",
             "choices": [
-                
+                {
+                    "text":"Look around.",
+                    "nextScene": "lookout"
+                }
+            ]
+        },
+        {
+            "name": "lookout",
+            "text": "There is nothing around. Only sand. A lots of it.",
+            "choices": [
+                [if (inv.water_bottle <= 0)]{
+                    "text": "Search the bag."
+                },[/if]
+                {
+                    "text": "Walk."
+                },
+                {
+                    "text": "Wait."
+                }
             ]
         }
     ],
     "settings": {
         "showSaveButtons": "false",
         "inventoryHidden": "true"
-    }
+    },
+    "inventories": [
+
+    ]
 }
