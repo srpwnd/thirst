@@ -12,6 +12,11 @@
             "name":"bag",
             "value": 0,
             "hidden": "true"
+        },
+        {
+            "name":"lookaround",
+            "value": 0,
+            "hidden": "true"
         }
         ]
     ],
@@ -35,6 +40,7 @@
                     "nextScene": "bag"
                 }, {
                     "text": "Look around.",
+                    "requirement":"inv.lookaround == 0",
                     "addItem": "lookaround,1",
                     "nextScene": "second"
                 },
@@ -124,7 +130,7 @@
             "choices": [
                 {
                     "text": "Continue walking.",
-                    "nextScene": "[if(inv.bottle_leaver == 1)]deadly_thirst[/if][if(inv.not_thirsty != 1)]well[/if]"
+                    "nextScene": "deadly_thirst,[if(inv.bottle_leaver == 1)]1[/if][if(inv.not_thirsty != 1)]0[/if]|well,[if(inv.bottle_leaver == 1)]0[/if][if(inv.not_thirsty != 1)]1[/if]"
                 }
             ]
         },
@@ -192,44 +198,44 @@
         },
         {
             "name": "well2",
-            "text": "The well asks you to roll a dice[ig(fight_counter<3)] again[/if]. You do so and continue with rolled number.",
+            "text": "The well asks you to roll a dice[if(fight_counter<3)] again[/if]. You do so and continue with rolled number.",
             "addItem":"!fight_counter,3|!well_hp,100",
             "choices": [
                 {
                     "text": "1",
                     "removeItem":"fight_counter,1",
                     "setItem":"well_hp,inv.well_hp-rand.20,45",
-                    "nextScene": "[if(inv.fight_counter>0 && inv.well_hp > 0]well2[/if][if(inv.fight_counter>0 && inv.well_hp <= 0]win[/if][if(inv.fight_counter <= 0 && inv.well_hp > 0]lose[/if]"
+                    "nextScene": "[if(inv.fight_counter>0 && inv.well_hp > 0)]well2[/if][if(inv.fight_counter>0 && inv.well_hp <= 0)]win[/if][if(inv.fight_counter <= 0 && inv.well_hp > 0)]lose[/if]"
                 },
                 {
                     "text": "2",
                     "removeItem":"fight_counter,1",
                     "setItem":"well_hp,inv.well_hp-rand.20,45",
-                    "nextScene": "[if(inv.fight_counter>0 && inv.well_hp > 0]well2[/if][if(inv.fight_counter>0 && inv.well_hp <= 0]win[/if][if(inv.fight_counter <= 0 && inv.well_hp > 0]lose[/if]"
+                    "nextScene": "[if(inv.fight_counter>0 && inv.well_hp > 0)]well2[/if][if(inv.fight_counter>0 && inv.well_hp <= 0)]win[/if][if(inv.fight_counter <= 0 && inv.well_hp > 0)]lose[/if]"
                 },
                 {
                     "text": "3",
                     "removeItem":"fight_counter,1",
                     "setItem":"well_hp,inv.well_hp-rand.20,45",
-                    "nextScene": "[if(inv.fight_counter>0 && inv.well_hp > 0]well2[/if][if(inv.fight_counter>0 && inv.well_hp <= 0]win[/if][if(inv.fight_counter <= 0 && inv.well_hp > 0]lose[/if]"
+                    "nextScene": "[if(inv.fight_counter>0 && inv.well_hp > 0)]well2[/if][if(inv.fight_counter>0 && inv.well_hp <= 0)]win[/if][if(inv.fight_counter <= 0 && inv.well_hp > 0)]lose[/if]"
                 },
                 {
                     "text": "4",
                     "removeItem":"fight_counter,1",
                     "setItem":"well_hp,inv.well_hp-rand.20,45",
-                    "nextScene": "[if(inv.fight_counter>0 && inv.well_hp > 0]well2[/if][if(inv.fight_counter>0 && inv.well_hp <= 0]win[/if][if(inv.fight_counter <= 0 && inv.well_hp > 0]lose[/if]"
+                    "nextScene": "[if(inv.fight_counter>0 && inv.well_hp > 0)]well2[/if][if(inv.fight_counter>0 && inv.well_hp <= 0)]win[/if][if(inv.fight_counter <= 0 && inv.well_hp > 0)]lose[/if]"
                 },
                 {
                     "text": "5",
                     "removeItem":"fight_counter,1",
                     "setItem":"well_hp,inv.well_hp-rand.20,45",
-                    "nextScene": "[if(inv.fight_counter>0 && inv.well_hp > 0]well2[/if][if(inv.fight_counter>0 && inv.well_hp <= 0]win[/if][if(inv.fight_counter <= 0 && inv.well_hp > 0]lose[/if]"
+                    "nextScene": "[if(inv.fight_counter>0 && inv.well_hp > 0)]well2[/if][if(inv.fight_counter>0 && inv.well_hp <= 0)]win[/if][if(inv.fight_counter <= 0 && inv.well_hp > 0)]lose[/if]"
                 },
                 {
                     "text": "6",
                     "removeItem":"fight_counter,1",
                     "setItem":"well_hp,inv.well_hp-rand.20,45",
-                    "nextScene": "[if(inv.fight_counter>0 && inv.well_hp > 0]well2[/if][if(inv.fight_counter>0 && inv.well_hp <= 0]win[/if][if(inv.fight_counter <= 0 && inv.well_hp > 0]lose[/if]"
+                    "nextScene": "[if(inv.fight_counter>0 && inv.well_hp > 0)]well2[/if][if(inv.fight_counter>0 && inv.well_hp <= 0)]win[/if][if(inv.fight_counter <= 0 && inv.well_hp > 0)]lose[/if]"
                 }
             ]
         }, 
