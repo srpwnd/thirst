@@ -354,7 +354,8 @@
 
     ],
     "settings": {
-        "showSaveButtons": "false",
-        "inventoryHidden": "false"
+        "debugMode":true,
+        "showSaveButtons": false,
+        "saveMode": "cookie"
     }
 }
