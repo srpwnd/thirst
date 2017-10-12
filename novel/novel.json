@@ -64,7 +64,7 @@
         {
             "name": "bag",
             "text": "You search the bag. There is a water bottle.",
-            "setItem": "bag,1",
+            "setItem": "!bag,1",
             "choices": [
                 {
                     "text":"Take the bottle.",
@@ -214,127 +214,109 @@
             "choices": [
                 {
                     "text": "1",
-                    "removeItem":"fight_counter,1",
-                    "setItem":"well_hp,inv.well_hp-rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
                     "requirement":"inv.fight_counter>0 && inv.well_hp > 0",
                     "nextScene": "well2"
                 },
                 {
                     "text": "2",
-                    "removeItem":"fight_counter,1",
-                    "setItem":"well_hp,inv.well_hp-rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
                     "requirement":"inv.fight_counter>0 && inv.well_hp > 0",
                     "nextScene": "well2"
                 },
                 {
                     "text": "3",
-                    "removeItem":"fight_counter,1",
-                    "setItem":"well_hp,inv.well_hp-rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
                     "requirement":"inv.fight_counter>0 && inv.well_hp > 0",
                     "nextScene": "well2"
                 },
                 {
                     "text": "4",
-                    "removeItem":"fight_counter,1",
-                    "setItem":"well_hp,inv.well_hp-rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
                     "requirement":"inv.fight_counter>0 && inv.well_hp > 0",
                     "nextScene": "well2"
                 },
                 {
                     "text": "5",
-                    "removeItem":"fight_counter,1",
-                    "setItem":"well_hp,inv.well_hp-rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
                     "requirement":"inv.fight_counter>0 && inv.well_hp > 0",
                     "nextScene": "well2"
                 },
                 {
                     "text": "6",
-                    "removeItem":"fight_counter,1",
-                    "setItem":"well_hp,inv.well_hp-rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
                     "requirement":"inv.fight_counter>0 && inv.well_hp > 0",
                     "nextScene": "well2"
                 },
                 {
                     "text": "1",
-                    "removeItem":"fight_counter,1",
-                    "setItem":"well_hp,inv.well_hp-rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
                     "requirement":"inv.fight_counter>0 && inv.well_hp <= 0",
                     "nextScene": "win"
                 },
                 {
                     "text": "2",
-                    "removeItem":"fight_counter,1",
-                    "setItem":"well_hp,inv.well_hp-rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
                     "requirement":"inv.fight_counter>0 && inv.well_hp <= 0",
                     "nextScene": "win"
                 },
                 {
                     "text": "3",
-                    "removeItem":"fight_counter,1",
-                    "setItem":"well_hp,inv.well_hp-rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
                     "requirement":"inv.fight_counter>0 && inv.well_hp <= 0",
                     "nextScene": "win"
                 },
                 {
                     "text": "4",
-                    "removeItem":"fight_counter,1",
-                    "setItem":"well_hp,inv.well_hp-rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
                     "requirement":"inv.fight_counter>0 && inv.well_hp <= 0",
                     "nextScene": "win"
                 },
                 {
                     "text": "5",
-                    "removeItem":"fight_counter,1",
-                    "setItem":"well_hp,inv.well_hp-rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
                     "requirement":"inv.fight_counter>0 && inv.well_hp <= 0",
                     "nextScene": "win"
                 },
                 {
                     "text": "6",
-                    "removeItem":"fight_counter,1",
-                    "setItem":"well_hp,inv.well_hp-rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
                     "requirement":"inv.fight_counter>0 && inv.well_hp <= 0",
                     "nextScene": "win"
                 },
                 {
                     "text": "1",
-                    "removeItem":"fight_counter,1",
-                    "setItem":"well_hp,inv.well_hp-rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
                     "requirement":"inv.fight_counter <= 0 && inv.well_hp > 0",
                     "nextScene": "lose"
                 },
                 {
                     "text": "2",
-                    "removeItem":"fight_counter,1",
-                    "setItem":"well_hp,inv.well_hp-rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
                     "requirement":"inv.fight_counter <= 0 && inv.well_hp > 0",
                     "nextScene": "lose"
                 },
                 {
                     "text": "3",
-                    "removeItem":"fight_counter,1",
-                    "setItem":"well_hp,inv.well_hp-rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
                     "requirement":"inv.fight_counter <= 0 && inv.well_hp > 0",
                     "nextScene": "lose"
                 },
                 {
                     "text": "4",
-                    "removeItem":"fight_counter,1",
-                    "setItem":"well_hp,inv.well_hp-rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
                     "requirement":"inv.fight_counter <= 0 && inv.well_hp > 0",
                     "nextScene": "lose"
                 },
                 {
                     "text": "5",
-                    "removeItem":"fight_counter,1",
-                    "setItem":"well_hp,inv.well_hp-rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
                     "requirement":"inv.fight_counter <= 0 && inv.well_hp > 0",
                     "nextScene": "lose"
                 },
                 {
                     "text": "6",
-                    "removeItem":"fight_counter,1",
-                    "setItem":"well_hp,inv.well_hp-rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
                     "requirement":"inv.fight_counter <= 0 && inv.well_hp > 0",
                     "nextScene": "lose"
                 }
