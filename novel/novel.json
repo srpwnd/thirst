@@ -95,7 +95,7 @@
         },
         {
             "name": "walk2",
-            "text": "It is very hot. [if(inv.not_thirsty != 1)]You are getting thirsty.[/if]",
+            "text": "The sunlight seems unbearable. [if(inv.not_thirsty != 1)]You are getting thirsty.[/if]",
             "choices": [
                 {
                     "text": "Walk.",
@@ -126,11 +126,11 @@
         },
         {
             "name": "flicker",
-            "text": "[if(inv.bottle_leaver == 1)]As you get closer to the place you saw the flickering from you meet a small child. He doesn't talk. Neither do you. He joins you on your journey.[/if][if(inv.not_thirsty != 1)]You are thirsty.[/if] There is still a long way ahead of you.",
+            "text": "[if(inv.bottle_leaver == 1)]As you get closer to the place you saw the flickering from you meet a small child. He doesn't talk. Neither do you. He joins you on your journey.[/if][if(inv.not_thirsty == 0)]You are thirsty.[/if] There is still a long way ahead of you.",
             "choices": [
                 {
                     "text": "Continue walking.",
-                    "nextScene": "deadly_thirst,[if(inv.bottle_leaver == 1)]1[/if][if(inv.not_thirsty != 1)]0[/if]|well,[if(inv.bottle_leaver == 1)]0[/if][if(inv.not_thirsty != 1)]1[/if]"
+                    "nextScene": "deadly_thirst,[if(inv.bottle_leaver == 1)]1[/if][if(inv.not_thirsty == 1)]0[/if]|well,[if(inv.bottle_leaver == 1)]0[/if][if(inv.not_thirsty == 1)]1[/if]"
                 }
             ]
         },
