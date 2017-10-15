@@ -1,0 +1,16 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: 'IM Fell English SC', serif;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    background-color: white;
+    color: black;
+}
+ul li {
+    list-style-type: none;
+}
