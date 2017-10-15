@@ -1,6 +1,6 @@
 {
     "name": "Thirst",
-    "version": "0.1a",
+    "version": "0.2a",
     "inventories": [ 
         [ 
         {
@@ -213,109 +213,109 @@
             "text": "There stands well with [inv.well_hp] hp. The well asks you to roll a dice[if (fight_counter<3)] again[/if]. You do so and continue with rolled number.",
             "choices": [
                 {
-                    "text": "1",
+                    "text": "Number 1",
                     "removeItem":"!fight_counter,1|!well_hp,20",
                     "requirement":"inv.fight_counter>0&&inv.well_hp>0",
                     "nextScene": "well2"
                 },
                 {
-                    "text": "2",
+                    "text": "Number 2",
                     "removeItem":"!fight_counter,1|!well_hp,25",
                     "requirement":"inv.fight_counter>0&&inv.well_hp>0",
                     "nextScene": "well2"
                 },
                 {
-                    "text": "3",
+                    "text": "Number 3",
                     "removeItem":"!fight_counter,1|!well_hp,30",
                     "requirement":"inv.fight_counter>0&&inv.well_hp>0",
                     "nextScene": "well2"
                 },
                 {
-                    "text": "4",
+                    "text": "Number 4",
                     "removeItem":"!fight_counter,1|!well_hp,35",
                     "requirement":"inv.fight_counter>0&&inv.well_hp>0",
                     "nextScene": "well2"
                 },
                 {
-                    "text": "5",
+                    "text": "Number 5",
                     "removeItem":"!fight_counter,1|!well_hp,50",
                     "requirement":"inv.fight_counter>0&&inv.well_hp>0",
                     "nextScene": "well2"
                 },
                 {
-                    "text": "6",
+                    "text": "Number 6",
                     "removeItem":"!fight_counter,1|!well_hp,70",
                     "requirement":"inv.fight_counter>0&&inv.well_hp>0",
                     "nextScene": "well2"
                 },
                 {
-                    "text": "1",
+                    "text": "Number 1",
                     "removeItem":"!fight_counter,1|!well_hp,20",
                     "requirement":"inv.fight_counter>=0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
-                    "text": "2",
+                    "text": "Number 2",
                     "removeItem":"!fight_counter,1|!well_hp,25",
                     "requirement":"inv.fight_counter>=0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
-                    "text": "3",
+                    "text": "Number 3",
                     "removeItem":"!fight_counter,1|!well_hp,30",
                     "requirement":"inv.fight_counter>=0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
-                    "text": "4",
+                    "text": "Number 4",
                     "removeItem":"!fight_counter,1|!well_hp,35",
                     "requirement":"inv.fight_counter>=0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
-                    "text": "5",
+                    "text": "Number 5",
                     "removeItem":"!fight_counter,1|!well_hp,50",
                     "requirement":"inv.fight_counter>=0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
-                    "text": "6",
+                    "text": "Number 6",
                     "removeItem":"!fight_counter,1|!well_hp,70",
                     "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
-                    "text": "1",
+                    "text": "Number 1",
                     "removeItem":"!fight_counter,1|!well_hp,20",
                     "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 },
                 {
-                    "text": "2",
+                    "text": "Number 2",
                     "removeItem":"!fight_counter,1|!well_hp,25",
                     "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 },
                 {
-                    "text": "3",
+                    "text": "Number 3",
                     "removeItem":"!fight_counter,1|!well_hp,30",
                     "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 },
                 {
-                    "text": "4",
+                    "text": "Number 4",
                     "removeItem":"fight_counter,1|well_hp,35",
                     "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 },
                 {
-                    "text": "5",
+                    "text": "Number 5",
                     "removeItem":"!fight_counter,1|!well_hp,50",
                     "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 },
                 {
-                    "text": "6",
+                    "text": "Number 6",
                     "removeItem":"!fight_counter,1|!well_hp,70",
                     "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
@@ -331,12 +331,8 @@
             "name":"lose",
             "text":"You didn't get any water out of the well. You managed to walk a few more miles trying to save yourself before you died of thirst."
         }
-
-
-
     ],
     "settings": {
-        "debugMode":true,
         "showSaveButtons": false,
         "saveMode": "cookie"
     }
