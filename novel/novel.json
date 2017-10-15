@@ -1,28 +1,28 @@
 {
     "name": "Thirst",
     "version": "0.2a",
-    "inventories": [ 
-        [ 
-        {
-            "name":"water_bottle",
-            "value": 0,
-            "displayName": "Watter bottle"
-        } ,
-        {
-            "name":"bag",
-            "value": 0,
-            "hidden": "true"
-        },
-        {
-            "name":"lookaround",
-            "value": 0,
-            "hidden": "true"
-        },
-        {
-            "name":"not_thirsty",
-            "value": 0,
-            "hidden":"true"
-        }
+    "inventories": [
+        [
+            {
+                "name": "water_bottle",
+                "value": 0,
+                "displayName": "Watter bottle"
+            },
+            {
+                "name": "bag",
+                "value": 0,
+                "hidden": "true"
+            },
+            {
+                "name": "lookaround",
+                "value": 0,
+                "hidden": "true"
+            },
+            {
+                "name": "not_thirsty",
+                "value": 0,
+                "hidden": "true"
+            }
         ]
     ],
     "scenes": [
@@ -35,28 +35,30 @@
                     "nextScene": "second"
                 }
             ]
-        },{
+        },
+        {
             "name": "second",
             "text": "Desert. [if (inv.bag==0)]There is a bag next to you.[/if] [if (inv.lookaround==1)]There is nothing around. Only sand. A lots of it.[/if]",
-            "choices":[
+            "choices": [
                 {
                     "text": "Search the bag.",
-                    "requirement":"inv.bag==0",
+                    "requirement": "inv.bag==0",
                     "nextScene": "bag"
-                }, {
+                },
+                {
                     "text": "Look around.",
-                    "requirement":"inv.lookaround==0",
+                    "requirement": "inv.lookaround==0",
                     "addItem": "!lookaround,1",
                     "nextScene": "second"
                 },
                 {
                     "text": "Walk.",
-                    "requirement":"inv.lookaround==1",
+                    "requirement": "inv.lookaround==1",
                     "nextScene": "walk0"
                 },
                 {
                     "text": "Wait.",
-                    "requirement":"inv.lookaround==1",
+                    "requirement": "inv.lookaround==1",
                     "nextScene": "walk2"
                 }
             ]
@@ -67,13 +69,13 @@
             "setItem": "!bag,1",
             "choices": [
                 {
-                    "text":"Take the bottle.",
-                    "setItem":"water_bottle,1",
+                    "text": "Take the bottle.",
+                    "setItem": "water_bottle,1",
                     "nextScene": "second"
                 },
                 {
-                    "text":"Leave the bottle.",
-                    "addItem":"!bottle_leaver,1",
+                    "text": "Leave the bottle.",
+                    "addItem": "!bottle_leaver,1",
                     "nextScene": "second"
                 }
             ]
@@ -108,9 +110,9 @@
                 },
                 {
                     "text": "Drink water.",
-                    "requirement":"inv.water_bottle>0",
-                    "removeItem":"water_bottle,1",
-                    "setItem":"!not_thirsty,1",
+                    "requirement": "inv.water_bottle>0",
+                    "removeItem": "water_bottle,1",
+                    "setItem": "!not_thirsty,1",
                     "nextScene": "walk2"
                 }
             ]
@@ -141,7 +143,7 @@
                 {
                     "text": "Continue walking.",
                     "requirement": "inv.not_thirsty==1",
-                    "nextScene": "well" 
+                    "nextScene": "well"
                 }
             ]
         },
@@ -151,13 +153,13 @@
             "choices": [
                 {
                     "text": "Give water.",
-                    "requirement":"inv.water_bottle>0",
-                    "removeItem":"water_bottle,1",
+                    "requirement": "inv.water_bottle>0",
+                    "removeItem": "water_bottle,1",
                     "nextScene": "airplane2"
                 },
                 {
                     "text": "Walk away.",
-                    "nextScene":"wandering"
+                    "nextScene": "wandering"
                 }
             ]
         },
@@ -167,7 +169,7 @@
             "choices": [
                 {
                     "text": "Drink the water.",
-                    "requirement":"inv.bottle_leaver==1",
+                    "requirement": "inv.bottle_leaver==1",
                     "nextScene": "well"
                 }
             ]
@@ -178,7 +180,7 @@
             "choices": [
                 {
                     "text": "Inspect the well.",
-                    "addItem":"!fight_counter,3|!well_hp,100",
+                    "addItem": "!fight_counter,3|!well_hp,100",
                     "nextScene": "well2"
                 }
             ]
@@ -214,122 +216,121 @@
             "choices": [
                 {
                     "text": "Number 1",
-                    "removeItem":"!fight_counter,1|!well_hp,20",
-                    "requirement":"inv.fight_counter>0&&inv.well_hp>0",
+                    "removeItem": "!fight_counter,1|!well_hp,20",
+                    "requirement": "inv.fight_counter>0&&inv.well_hp>0",
                     "nextScene": "well2"
                 },
                 {
                     "text": "Number 2",
-                    "removeItem":"!fight_counter,1|!well_hp,25",
-                    "requirement":"inv.fight_counter>0&&inv.well_hp>0",
+                    "removeItem": "!fight_counter,1|!well_hp,25",
+                    "requirement": "inv.fight_counter>0&&inv.well_hp>0",
                     "nextScene": "well2"
                 },
                 {
                     "text": "Number 3",
-                    "removeItem":"!fight_counter,1|!well_hp,30",
-                    "requirement":"inv.fight_counter>0&&inv.well_hp>0",
+                    "removeItem": "!fight_counter,1|!well_hp,30",
+                    "requirement": "inv.fight_counter>0&&inv.well_hp>0",
                     "nextScene": "well2"
                 },
                 {
                     "text": "Number 4",
-                    "removeItem":"!fight_counter,1|!well_hp,35",
-                    "requirement":"inv.fight_counter>0&&inv.well_hp>0",
+                    "removeItem": "!fight_counter,1|!well_hp,35",
+                    "requirement": "inv.fight_counter>0&&inv.well_hp>0",
                     "nextScene": "well2"
                 },
                 {
                     "text": "Number 5",
-                    "removeItem":"!fight_counter,1|!well_hp,50",
-                    "requirement":"inv.fight_counter>0&&inv.well_hp>0",
+                    "removeItem": "!fight_counter,1|!well_hp,50",
+                    "requirement": "inv.fight_counter>0&&inv.well_hp>0",
                     "nextScene": "well2"
                 },
                 {
                     "text": "Number 6",
-                    "removeItem":"!fight_counter,1|!well_hp,70",
-                    "requirement":"inv.fight_counter>0&&inv.well_hp>0",
+                    "removeItem": "!fight_counter,1|!well_hp,70",
+                    "requirement": "inv.fight_counter>0&&inv.well_hp>0",
                     "nextScene": "well2"
                 },
                 {
                     "text": "Number 1",
-                    "removeItem":"!fight_counter,1|!well_hp,20",
-                    "requirement":"inv.fight_counter>=0&&inv.well_hp<=0",
+                    "removeItem": "!fight_counter,1|!well_hp,20",
+                    "requirement": "inv.fight_counter>=0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
                     "text": "Number 2",
-                    "removeItem":"!fight_counter,1|!well_hp,25",
-                    "requirement":"inv.fight_counter>=0&&inv.well_hp<=0",
+                    "removeItem": "!fight_counter,1|!well_hp,25",
+                    "requirement": "inv.fight_counter>=0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
                     "text": "Number 3",
-                    "removeItem":"!fight_counter,1|!well_hp,30",
-                    "requirement":"inv.fight_counter>=0&&inv.well_hp<=0",
+                    "removeItem": "!fight_counter,1|!well_hp,30",
+                    "requirement": "inv.fight_counter>=0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
                     "text": "Number 4",
-                    "removeItem":"!fight_counter,1|!well_hp,35",
-                    "requirement":"inv.fight_counter>=0&&inv.well_hp<=0",
+                    "removeItem": "!fight_counter,1|!well_hp,35",
+                    "requirement": "inv.fight_counter>=0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
                     "text": "Number 5",
-                    "removeItem":"!fight_counter,1|!well_hp,50",
-                    "requirement":"inv.fight_counter>=0&&inv.well_hp<=0",
+                    "removeItem": "!fight_counter,1|!well_hp,50",
+                    "requirement": "inv.fight_counter>=0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
                     "text": "Number 6",
-                    "removeItem":"!fight_counter,1|!well_hp,70",
-                    "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
+                    "removeItem": "!fight_counter,1|!well_hp,70",
+                    "requirement": "inv.fight_counter>0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
                     "text": "Number 1",
-                    "removeItem":"!fight_counter,1|!well_hp,20",
-                    "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
+                    "removeItem": "!fight_counter,1|!well_hp,20",
+                    "requirement": "inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 },
                 {
                     "text": "Number 2",
-                    "removeItem":"!fight_counter,1|!well_hp,25",
-                    "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
+                    "removeItem": "!fight_counter,1|!well_hp,25",
+                    "requirement": "inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 },
                 {
                     "text": "Number 3",
-                    "removeItem":"!fight_counter,1|!well_hp,30",
-                    "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
+                    "removeItem": "!fight_counter,1|!well_hp,30",
+                    "requirement": "inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 },
                 {
                     "text": "Number 4",
-                    "removeItem":"fight_counter,1|well_hp,35",
-                    "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
+                    "removeItem": "fight_counter,1|well_hp,35",
+                    "requirement": "inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 },
                 {
                     "text": "Number 5",
-                    "removeItem":"!fight_counter,1|!well_hp,50",
-                    "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
+                    "removeItem": "!fight_counter,1|!well_hp,50",
+                    "requirement": "inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 },
                 {
                     "text": "Number 6",
-                    "removeItem":"!fight_counter,1|!well_hp,70",
-                    "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
+                    "removeItem": "!fight_counter,1|!well_hp,70",
+                    "requirement": "inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 }
             ]
-        }, 
+        },
         {
-            "name":"win",
-            "text":"You managed to get water out of the well. You didn't dehydrate and kept walking for your rescue. Maybe you even got out alive, who knows."
-        }
-        , 
+            "name": "win",
+            "text": "You managed to get water out of the well. You didn't dehydrate and kept walking for your rescue. Maybe you even got out alive, who knows."
+        },
         {
-            "name":"lose",
-            "text":"You didn't get any water out of the well. You managed to walk a few more miles trying to save yourself before you died of thirst."
+            "name": "lose",
+            "text": "You didn't get any water out of the well. You managed to walk a few more miles trying to save yourself before you died of thirst."
         }
     ],
     "settings": {

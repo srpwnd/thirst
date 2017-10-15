@@ -4,16 +4,16 @@ body{
     font-family: 'IM Fell English SC', serif;
     font-size: 28px;
 }
-novel a{
+#novel-area a{
     color: white;
     text-decoration: none;
     padding-left: 5px;
     padding-right: 5px;
 }
-novel a:hover {
+#novel-area a:hover {
     background-color: white;
     color: black;
 }
-novel ul li {
+#novel-area ul li {
     list-style-type: none;
 }
