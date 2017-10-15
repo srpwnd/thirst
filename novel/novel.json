@@ -106,6 +106,14 @@
             "choices": [
                 {
                     "text": "Walk.",
+                    "requirement":"inv.not_thirsty==0",
+                    "setItem":"!no_drinkey,1",
+                    "nextScene": "walk3"
+                },
+                {
+                    "text": "Walk.",
+                    "requirement":"inv.not_thirsty==1",
+                    "setItem":"!no_drinkey,0",
                     "nextScene": "walk3"
                 },
                 {
@@ -133,7 +141,7 @@
         },
         {
             "name": "flicker",
-            "text": "[if (inv.bottle_leaver==1)]As you get closer to the place you saw the flickering from you meet a small child. He doesn't talk. Neither do you. He joins you on your journey.[/if][if (inv.not_thirsty==0)]You are thirsty.[/if] There is still a long way ahead of you.",
+            "text": "[if (inv.bottle_leaver==1)]As you get closer to the place you saw the flickering from you meet a small child. He doesn't talk. Neither do you. He joins you on your journey.[/if][if (inv.not_thirsty==0)]You are thirsty.[/if] There is still a long way ahead of you.[if (inv-no_drinkey==0)][pause 30] You have lost the bottle with water and your way.[/if]",
             "choices": [
                 {
                     "text": "Continue walking.",
