@@ -37,26 +37,26 @@
             ]
         },{
             "name": "second",
-            "text": "Desert. [if(inv.bag == 0)]There is a bag next to you.[/if] [if (inv.lookaround == 1)]There is nothing around. Only sand. A lots of it.[/if]",
+            "text": "Desert. [if(inv.bag==0)]There is a bag next to you.[/if] [if(inv.lookaround==1)]There is nothing around. Only sand. A lots of it.[/if]",
             "choices":[
                 {
                     "text": "Search the bag.",
-                    "requirement":"inv.bag == 0",
+                    "requirement":"inv.bag==0",
                     "nextScene": "bag"
                 }, {
                     "text": "Look around.",
-                    "requirement":"inv.lookaround == 0",
-                    "addItem": "lookaround,1",
+                    "requirement":"inv.lookaround==0",
+                    "addItem": "!lookaround,1",
                     "nextScene": "second"
                 },
                 {
                     "text": "Walk.",
-                    "requirement":"inv.lookaround == 1",
+                    "requirement":"inv.lookaround==1",
                     "nextScene": "walk0"
                 },
                 {
                     "text": "Wait.",
-                    "requirement":"inv.lookaround == 1",
+                    "requirement":"inv.lookaround==1",
                     "nextScene": "walk2"
                 }
             ]
@@ -100,7 +100,7 @@
         },
         {
             "name": "walk2",
-            "text": "The sunlight seems unbearable. [if(inv.not_thirsty == 0)]You are getting thirsty.[/if]",
+            "text": "The sunlight seems unbearable. [if(inv.not_thirsty==0)]You are getting thirsty.[/if]",
             "choices": [
                 {
                     "text": "Walk.",
@@ -108,7 +108,7 @@
                 },
                 {
                     "text": "Drink water.",
-                    "requirement":"inv.water_bottle > 0",
+                    "requirement":"inv.water_bottle>0",
                     "removeItem":"water_bottle,1",
                     "setItem":"!not_thirsty,1",
                     "nextScene": "walk2"
@@ -131,27 +131,27 @@
         },
         {
             "name": "flicker",
-            "text": "[if(inv.bottle_leaver == 1)]As you get closer to the place you saw the flickering from you meet a small child. He doesn't talk. Neither do you. He joins you on your journey.[/if][if(inv.not_thirsty == 0)]You are thirsty.[/if] There is still a long way ahead of you.",
+            "text": "[if(inv.bottle_leaver==1)]As you get closer to the place you saw the flickering from you meet a small child. He doesn't talk. Neither do you. He joins you on your journey.[/if][if(inv.not_thirsty==0)]You are thirsty.[/if] There is still a long way ahead of you.",
             "choices": [
                 {
                     "text": "Continue walking.",
-                    "requirement": "inv.bottle_leaver == 1 && inv.not_thirsty == 0",
+                    "requirement": "inv.bottle_leaver==1&&inv.not_thirsty==0",
                     "nextScene": "deadly_thirst"
                 },
                 {
                     "text": "Continue walking.",
-                    "requirement": "inv.not_thirsty == 1",
+                    "requirement": "inv.not_thirsty==1",
                     "nextScene": "well" 
                 }
             ]
         },
         {
             "name": "airplane",
-            "text": "You found what seems to be like a crashed airplane. What a strange thing to find in a desert! you think for yourself. You get closer to the plane. It looks habitated. There is old woman sitting under the cloth hiding from the sun. She doesn't talk. Neither do you. She just hands you a book, old book. You open it and see there is a circled word. \"Thirsty\" says the word. You understand. [if(inv.water_bottle == 0)]But you are out of water.[/if]",
+            "text": "You found what seems to be like a crashed airplane. What a strange thing to find in a desert! you think for yourself. You get closer to the plane. It looks habitated. There is old woman sitting under the cloth hiding from the sun. She doesn't talk. Neither do you. She just hands you a book, old book. You open it and see there is a circled word. \"Thirsty\" says the word. You understand. [if(inv.water_bottle==0)]But you are out of water.[/if]",
             "choices": [
                 {
                     "text": "Give water.",
-                    "requirement":"inv.water_bottle > 0",
+                    "requirement":"inv.water_bottle>0",
                     "removeItem":"water_bottle,1",
                     "nextScene": "airplane2"
                 },
@@ -163,18 +163,18 @@
         },
         {
             "name": "deadly_thirst",
-            "text": "The thirst really strikes you now. You fall on your knees.[if(inv.bottle_leaver == 1)] The small child looks at you. He says nothing. After a while of staring at you he hands you a bottle of water.[/if]",
+            "text": "The thirst really strikes you now. You fall on your knees.[if(inv.bottle_leaver==1)] The small child looks at you. He says nothing. After a while of staring at you he hands you a bottle of water.[/if]",
             "choices": [
                 {
                     "text": "Drink the water.",
-                    "requirement":"inv.bottle_leaver == 1",
+                    "requirement":"inv.bottle_leaver==1",
                     "nextScene": "well"
                 }
             ]
         },
         {
             "name": "well",
-            "text": "[if(inv.bottle_leaver == 1)]The childs water has saved your life.[/if] You got to a place looking like an abandoned village. You [if(inv.bottle_leaver == 1)]and the child [/if]decide to explore. There are few half-destroyed shelters. And a well! You get closer hoping to find some water.",
+            "text": "[if(inv.bottle_leaver==1)]The childs water has saved your life.[/if] You got to a place looking like an abandoned village. You [if(inv.bottle_leaver==1)]and the child [/if]decide to explore. There are few half-destroyed shelters. And a well! You get closer hoping to find some water.",
             "choices": [
                 {
                     "text": "Inspect the well.",
@@ -184,7 +184,7 @@
         },
         {
             "name": "wandering",
-            "text": "You are wandering through the desert. Without any food[if(inv.water_bottle == 0)], without any water[/if]. You don't know where you are going. It has been hours since you met the old lady. [if(inv.water_bottle > 0)]You wish you'd given her some water.[/if] You have lost your way, you are wandering until your last breath."
+            "text": "You are wandering through the desert. Without any food[if(inv.water_bottle==0)], without any water[/if]. You don't know where you are going. It has been hours since you met the old lady. [if(inv.water_bottle>0)]You wish you'd given her some water.[/if] You have lost your way, you are wandering until your last breath."
         },
         {
             "name": "airplane2",
@@ -215,109 +215,109 @@
                 {
                     "text": "1",
                     "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter>0 && inv.well_hp > 0",
+                    "requirement":"inv.fight_counter>0&&inv.well_hp>0",
                     "nextScene": "well2"
                 },
                 {
                     "text": "2",
                     "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter>0 && inv.well_hp > 0",
+                    "requirement":"inv.fight_counter>0&&inv.well_hp>0",
                     "nextScene": "well2"
                 },
                 {
                     "text": "3",
                     "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter>0 && inv.well_hp > 0",
+                    "requirement":"inv.fight_counter>0&&inv.well_hp>0",
                     "nextScene": "well2"
                 },
                 {
                     "text": "4",
                     "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter>0 && inv.well_hp > 0",
+                    "requirement":"inv.fight_counter>0&&inv.well_hp>0",
                     "nextScene": "well2"
                 },
                 {
                     "text": "5",
                     "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter>0 && inv.well_hp > 0",
+                    "requirement":"inv.fight_counter>0&&inv.well_hp>0",
                     "nextScene": "well2"
                 },
                 {
                     "text": "6",
                     "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter>0 && inv.well_hp > 0",
+                    "requirement":"inv.fight_counter>0&&inv.well_hp>0",
                     "nextScene": "well2"
                 },
                 {
                     "text": "1",
                     "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter>0 && inv.well_hp <= 0",
+                    "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
                     "text": "2",
                     "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter>0 && inv.well_hp <= 0",
+                    "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
                     "text": "3",
                     "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter>0 && inv.well_hp <= 0",
+                    "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
                     "text": "4",
                     "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter>0 && inv.well_hp <= 0",
+                    "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
                     "text": "5",
                     "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter>0 && inv.well_hp <= 0",
+                    "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
                     "text": "6",
                     "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter>0 && inv.well_hp <= 0",
+                    "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
                     "text": "1",
                     "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter <= 0 && inv.well_hp > 0",
+                    "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 },
                 {
                     "text": "2",
                     "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter <= 0 && inv.well_hp > 0",
+                    "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 },
                 {
                     "text": "3",
                     "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter <= 0 && inv.well_hp > 0",
+                    "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 },
                 {
                     "text": "4",
                     "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter <= 0 && inv.well_hp > 0",
+                    "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 },
                 {
                     "text": "5",
                     "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter <= 0 && inv.well_hp > 0",
+                    "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 },
                 {
                     "text": "6",
                     "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter <= 0 && inv.well_hp > 0",
+                    "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 }
             ]
