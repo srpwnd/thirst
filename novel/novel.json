@@ -163,7 +163,7 @@
         },
         {
             "name": "deadly_thirst",
-            "text": "The thirst really strikes you now. You fall on your knees.[if (inv.bottle_leaver==1)] The small child looks at you. He says nothing. After a while of staring at you he hands you a bottle of water.[/if]",
+            "text": "The thirst really strikes you now. You fall on your knees.[if (inv.bottle_leaver==1)] The small child looks at you. He says nothing. [pause 30]After a while of staring at you he hands you a bottle of water.[/if]",
             "choices": [
                 {
                     "text": "Drink the water.",
@@ -178,6 +178,7 @@
             "choices": [
                 {
                     "text": "Inspect the well.",
+                    "addItem":"!fight_counter,3|!well_hp,100",
                     "nextScene": "well2"
                 }
             ]
@@ -210,232 +211,117 @@
         {
             "name": "well2",
             "text": "There stands well with [inv.well_hp] hp. The well asks you to roll a dice[if (fight_counter<3)] again[/if]. You do so and continue with rolled number.",
-            "addItem":"!fight_counter,3|!well_hp,100",
             "choices": [
                 {
                     "text": "1",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,20",
                     "requirement":"inv.fight_counter>0&&inv.well_hp>0",
-                    "nextScene": "well3"
+                    "nextScene": "well2"
                 },
                 {
                     "text": "2",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,25",
                     "requirement":"inv.fight_counter>0&&inv.well_hp>0",
-                    "nextScene": "well3"
+                    "nextScene": "well2"
                 },
                 {
                     "text": "3",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,30",
                     "requirement":"inv.fight_counter>0&&inv.well_hp>0",
-                    "nextScene": "well3"
+                    "nextScene": "well2"
                 },
                 {
                     "text": "4",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,35",
                     "requirement":"inv.fight_counter>0&&inv.well_hp>0",
-                    "nextScene": "well3"
+                    "nextScene": "well2"
                 },
                 {
                     "text": "5",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,50",
                     "requirement":"inv.fight_counter>0&&inv.well_hp>0",
-                    "nextScene": "well3"
+                    "nextScene": "well2"
                 },
                 {
                     "text": "6",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,70",
                     "requirement":"inv.fight_counter>0&&inv.well_hp>0",
-                    "nextScene": "well3"
+                    "nextScene": "well2"
                 },
                 {
                     "text": "1",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,20",
                     "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
                     "text": "2",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,25",
                     "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
                     "text": "3",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,30",
                     "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
                     "text": "4",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,35",
                     "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
                     "text": "5",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,50",
                     "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
                     "text": "6",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,70",
                     "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
                     "text": "1",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,20",
                     "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 },
                 {
                     "text": "2",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,25",
                     "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 },
                 {
                     "text": "3",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,30",
                     "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 },
                 {
                     "text": "4",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,35",
                     "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 },
                 {
                     "text": "5",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,50",
                     "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 },
                 {
                     "text": "6",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "removeItem":"fight_counter,1|well_hp,70",
                     "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 }
             ]
         }, 
-        {
-            "name": "well3",
-            "text": "The well no has [inv.well_hp] hp. The well asks you to roll a dice[if (fight_counter<3)] again[/if]. You do so and continue with rolled number.",
-            "choices": [
-                {
-                    "text": "1",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter>0&&inv.well_hp>0",
-                    "nextScene": "well3"
-                },
-                {
-                    "text": "2",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter>0&&inv.well_hp>0",
-                    "nextScene": "well3"
-                },
-                {
-                    "text": "3",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter>0&&inv.well_hp>0",
-                    "nextScene": "well3"
-                },
-                {
-                    "text": "4",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter>0&&inv.well_hp>0",
-                    "nextScene": "well3"
-                },
-                {
-                    "text": "5",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter>0&&inv.well_hp>0",
-                    "nextScene": "well3"
-                },
-                {
-                    "text": "6",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter>0&&inv.well_hp>0",
-                    "nextScene": "well3"
-                },
-                {
-                    "text": "1",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
-                    "nextScene": "win"
-                },
-                {
-                    "text": "2",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
-                    "nextScene": "win"
-                },
-                {
-                    "text": "3",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
-                    "nextScene": "win"
-                },
-                {
-                    "text": "4",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
-                    "nextScene": "win"
-                },
-                {
-                    "text": "5",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
-                    "nextScene": "win"
-                },
-                {
-                    "text": "6",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
-                    "nextScene": "win"
-                },
-                {
-                    "text": "1",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
-                    "nextScene": "lose"
-                },
-                {
-                    "text": "2",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
-                    "nextScene": "lose"
-                },
-                {
-                    "text": "3",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
-                    "nextScene": "lose"
-                },
-                {
-                    "text": "4",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
-                    "nextScene": "lose"
-                },
-                {
-                    "text": "5",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
-                    "nextScene": "lose"
-                },
-                {
-                    "text": "6",
-                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
-                    "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
-                    "nextScene": "lose"
-                }
-            ]
-        },
         {
             "name":"win",
             "text":"You managed to get water out of the well. You didn't dehydrate and kept walking for your rescue. Maybe you even got out alive, who knows."
