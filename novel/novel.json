@@ -214,91 +214,91 @@
             "choices": [
                 {
                     "text": "1",
-                    "removeItem":"fight_counter,1|well_hp,20",
+                    "removeItem":"!fight_counter,1|!well_hp,20",
                     "requirement":"inv.fight_counter>0&&inv.well_hp>0",
                     "nextScene": "well2"
                 },
                 {
                     "text": "2",
-                    "removeItem":"fight_counter,1|well_hp,25",
+                    "removeItem":"!fight_counter,1|!well_hp,25",
                     "requirement":"inv.fight_counter>0&&inv.well_hp>0",
                     "nextScene": "well2"
                 },
                 {
                     "text": "3",
-                    "removeItem":"fight_counter,1|well_hp,30",
+                    "removeItem":"!fight_counter,1|!well_hp,30",
                     "requirement":"inv.fight_counter>0&&inv.well_hp>0",
                     "nextScene": "well2"
                 },
                 {
                     "text": "4",
-                    "removeItem":"fight_counter,1|well_hp,35",
+                    "removeItem":"!fight_counter,1|!well_hp,35",
                     "requirement":"inv.fight_counter>0&&inv.well_hp>0",
                     "nextScene": "well2"
                 },
                 {
                     "text": "5",
-                    "removeItem":"fight_counter,1|well_hp,50",
+                    "removeItem":"!fight_counter,1|!well_hp,50",
                     "requirement":"inv.fight_counter>0&&inv.well_hp>0",
                     "nextScene": "well2"
                 },
                 {
                     "text": "6",
-                    "removeItem":"fight_counter,1|well_hp,70",
+                    "removeItem":"!fight_counter,1|!well_hp,70",
                     "requirement":"inv.fight_counter>0&&inv.well_hp>0",
                     "nextScene": "well2"
                 },
                 {
                     "text": "1",
-                    "removeItem":"fight_counter,1|well_hp,20",
-                    "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
+                    "removeItem":"!fight_counter,1|!well_hp,20",
+                    "requirement":"inv.fight_counter>=0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
                     "text": "2",
-                    "removeItem":"fight_counter,1|well_hp,25",
-                    "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
+                    "removeItem":"!fight_counter,1|!well_hp,25",
+                    "requirement":"inv.fight_counter>=0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
                     "text": "3",
-                    "removeItem":"fight_counter,1|well_hp,30",
-                    "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
+                    "removeItem":"!fight_counter,1|!well_hp,30",
+                    "requirement":"inv.fight_counter>=0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
                     "text": "4",
-                    "removeItem":"fight_counter,1|well_hp,35",
-                    "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
+                    "removeItem":"!fight_counter,1|!well_hp,35",
+                    "requirement":"inv.fight_counter>=0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
                     "text": "5",
-                    "removeItem":"fight_counter,1|well_hp,50",
-                    "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
+                    "removeItem":"!fight_counter,1|!well_hp,50",
+                    "requirement":"inv.fight_counter>=0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
                     "text": "6",
-                    "removeItem":"fight_counter,1|well_hp,70",
+                    "removeItem":"!fight_counter,1|!well_hp,70",
                     "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
                     "nextScene": "win"
                 },
                 {
                     "text": "1",
-                    "removeItem":"fight_counter,1|well_hp,20",
+                    "removeItem":"!fight_counter,1|!well_hp,20",
                     "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 },
                 {
                     "text": "2",
-                    "removeItem":"fight_counter,1|well_hp,25",
+                    "removeItem":"!fight_counter,1|!well_hp,25",
                     "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 },
                 {
                     "text": "3",
-                    "removeItem":"fight_counter,1|well_hp,30",
+                    "removeItem":"!fight_counter,1|!well_hp,30",
                     "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 },
@@ -310,13 +310,13 @@
                 },
                 {
                     "text": "5",
-                    "removeItem":"fight_counter,1|well_hp,50",
+                    "removeItem":"!fight_counter,1|!well_hp,50",
                     "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 },
                 {
                     "text": "6",
-                    "removeItem":"fight_counter,1|well_hp,70",
+                    "removeItem":"!fight_counter,1|!well_hp,70",
                     "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
                     "nextScene": "lose"
                 }
