@@ -209,44 +209,44 @@
         },
         {
             "name": "well2",
-            "text": "The well asks you to roll a dice[if (fight_counter<3)] again[/if]. You do so and continue with rolled number.",
+            "text": "There stands well with [inv.well_hp] hp. The well asks you to roll a dice[if (fight_counter<3)] again[/if]. You do so and continue with rolled number.",
             "addItem":"!fight_counter,3|!well_hp,100",
             "choices": [
                 {
                     "text": "1",
                     "removeItem":"fight_counter,1|well_hp,rand.20,45",
                     "requirement":"inv.fight_counter>0&&inv.well_hp>0",
-                    "nextScene": "well2"
+                    "nextScene": "well3"
                 },
                 {
                     "text": "2",
                     "removeItem":"fight_counter,1|well_hp,rand.20,45",
                     "requirement":"inv.fight_counter>0&&inv.well_hp>0",
-                    "nextScene": "well2"
+                    "nextScene": "well3"
                 },
                 {
                     "text": "3",
                     "removeItem":"fight_counter,1|well_hp,rand.20,45",
                     "requirement":"inv.fight_counter>0&&inv.well_hp>0",
-                    "nextScene": "well2"
+                    "nextScene": "well3"
                 },
                 {
                     "text": "4",
                     "removeItem":"fight_counter,1|well_hp,rand.20,45",
                     "requirement":"inv.fight_counter>0&&inv.well_hp>0",
-                    "nextScene": "well2"
+                    "nextScene": "well3"
                 },
                 {
                     "text": "5",
                     "removeItem":"fight_counter,1|well_hp,rand.20,45",
                     "requirement":"inv.fight_counter>0&&inv.well_hp>0",
-                    "nextScene": "well2"
+                    "nextScene": "well3"
                 },
                 {
                     "text": "6",
                     "removeItem":"fight_counter,1|well_hp,rand.20,45",
                     "requirement":"inv.fight_counter>0&&inv.well_hp>0",
-                    "nextScene": "well2"
+                    "nextScene": "well3"
                 },
                 {
                     "text": "1",
@@ -322,6 +322,120 @@
                 }
             ]
         }, 
+        {
+            "name": "well3",
+            "text": "The well no has [inv.well_hp] hp. The well asks you to roll a dice[if (fight_counter<3)] again[/if]. You do so and continue with rolled number.",
+            "choices": [
+                {
+                    "text": "1",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "requirement":"inv.fight_counter>0&&inv.well_hp>0",
+                    "nextScene": "well3"
+                },
+                {
+                    "text": "2",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "requirement":"inv.fight_counter>0&&inv.well_hp>0",
+                    "nextScene": "well3"
+                },
+                {
+                    "text": "3",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "requirement":"inv.fight_counter>0&&inv.well_hp>0",
+                    "nextScene": "well3"
+                },
+                {
+                    "text": "4",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "requirement":"inv.fight_counter>0&&inv.well_hp>0",
+                    "nextScene": "well3"
+                },
+                {
+                    "text": "5",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "requirement":"inv.fight_counter>0&&inv.well_hp>0",
+                    "nextScene": "well3"
+                },
+                {
+                    "text": "6",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "requirement":"inv.fight_counter>0&&inv.well_hp>0",
+                    "nextScene": "well3"
+                },
+                {
+                    "text": "1",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
+                    "nextScene": "win"
+                },
+                {
+                    "text": "2",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
+                    "nextScene": "win"
+                },
+                {
+                    "text": "3",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
+                    "nextScene": "win"
+                },
+                {
+                    "text": "4",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
+                    "nextScene": "win"
+                },
+                {
+                    "text": "5",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
+                    "nextScene": "win"
+                },
+                {
+                    "text": "6",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "requirement":"inv.fight_counter>0&&inv.well_hp<=0",
+                    "nextScene": "win"
+                },
+                {
+                    "text": "1",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
+                    "nextScene": "lose"
+                },
+                {
+                    "text": "2",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
+                    "nextScene": "lose"
+                },
+                {
+                    "text": "3",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
+                    "nextScene": "lose"
+                },
+                {
+                    "text": "4",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
+                    "nextScene": "lose"
+                },
+                {
+                    "text": "5",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
+                    "nextScene": "lose"
+                },
+                {
+                    "text": "6",
+                    "removeItem":"fight_counter,1|well_hp,rand.20,45",
+                    "requirement":"inv.fight_counter<=0&&inv.well_hp>0",
+                    "nextScene": "lose"
+                }
+            ]
+        },
         {
             "name":"win",
             "text":"You managed to get water out of the well. You didn't dehydrate and kept walking for your rescue. Maybe you even got out alive, who knows."
