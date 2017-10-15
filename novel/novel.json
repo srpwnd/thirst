@@ -334,6 +334,7 @@
     ],
     "settings": {
         "showSaveButtons": false,
-        "saveMode": "cookie"
+        "saveMode": "cookie",
+        "inventoryHidden": true
     }
 }

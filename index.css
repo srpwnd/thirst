@@ -2,10 +2,13 @@ body{
     background-color: black;
     color: white;
     font-family: 'IM Fell English SC', serif;
+    font-size: 40px;
 }
 a{
     color: white;
     text-decoration: none;
+    padding-left: 1px;
+    padding-right: 1px;
 }
 a:hover {
     background-color: white;
