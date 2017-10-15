@@ -29,7 +29,6 @@
         {
             "name": "intro",
             "text": "You wake up.\n In the middle of a desert.\n There is a bag next to you.",
-            "executeJs": "UI.closeSaveNotification(); UI.closeLoadNotification()",
             "choices": [
                 {
                     "text": "Get up.",
@@ -335,7 +334,7 @@
         }
     ],
     "settings": {
-        "showSaveButtons": true,
+        "showSaveButtons": false,
         "inventoryHidden": true
     }
 }
