@@ -17,3 +17,9 @@ body{
 #novel-area ul li {
     list-style-type: none;
 }
+#novel-save-notification {
+    display: none;
+}
+#novel-load-notification {
+    display: none;
+}
